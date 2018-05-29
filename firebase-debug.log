@@ -1,0 +1,115 @@
+[debug] [2018-05-29T03:16:45.950Z] ----------------------------------------------------------------------
+[debug] [2018-05-29T03:16:45.954Z] Command:       /usr/local/Cellar/node/10.1.0/bin/node /usr/local/bin/firebase deploy --project one-time-password-21950
+[debug] [2018-05-29T03:16:45.954Z] CLI Version:   3.18.5
+[debug] [2018-05-29T03:16:45.955Z] Platform:      darwin
+[debug] [2018-05-29T03:16:45.955Z] Node Version:  v10.1.0
+[debug] [2018-05-29T03:16:45.956Z] Time:          Mon May 28 2018 21:16:45 GMT-0600 (MDT)
+[debug] [2018-05-29T03:16:45.956Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-05-29T03:16:45.976Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-29T03:16:45.976Z] > authorizing via signed-in user
+[debug] [2018-05-29T03:16:45.979Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-05-29T03:16:45.979Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/6oS7N4OLAK81fXMAVZFh0ba9OdbTI_6PmE0zcQt6-k0',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Mon May 28 2018 21:16:45 GMT-0600 (MDT)
+[debug] [2018-05-29T03:16:46.460Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-29T03:16:46.472Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/one-time-password-21950  
+  
+ Mon May 28 2018 21:16:46 GMT-0600 (MDT)
+[debug] [2018-05-29T03:16:47.337Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-29T03:16:47.338Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/one-time-password-21950/tokens  
+  
+ Mon May 28 2018 21:16:47 GMT-0600 (MDT)
+[debug] [2018-05-29T03:16:51.811Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'one-time-password-21950'...
+[info] 
+[info] i  deploying functions
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] ✔  functions: Finished running predeploy script.
+[debug] [2018-05-29T03:17:06.427Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase serve --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "dependencies": {
+    "firebase-admin": "~5.12.1",
+    "firebase-functions": "^1.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^4.12.0",
+    "eslint-plugin-promise": "^3.6.0"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[debug] [2018-05-29T03:17:06.429Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/one-time-password-21950?view=CONSUMER_VIEW  
+  
+ Mon May 28 2018 21:17:06 GMT-0600 (MDT)
+[debug] [2018-05-29T03:17:06.431Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/one-time-password-21950?view=CONSUMER_VIEW  
+  
+ Mon May 28 2018 21:17:06 GMT-0600 (MDT)
+[debug] [2018-05-29T03:17:07.296Z] <<< HTTP RESPONSE 200
+[warn] ⚠  functions: missing necessary APIs. Enabling now...
+[debug] [2018-05-29T03:17:07.298Z] >>> HTTP REQUEST PATCH https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/one-time-password-21950?updateMask=usageSettings  
+ { usageSettings: { consumerEnableStatus: 'ENABLED' } } 
+ Mon May 28 2018 21:17:07 GMT-0600 (MDT)
+[debug] [2018-05-29T03:17:07.309Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-29T03:17:08.264Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-29T03:17:18.268Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/one-time-password-21950?view=CONSUMER_VIEW  
+  
+ Mon May 28 2018 21:17:18 GMT-0600 (MDT)
+[debug] [2018-05-29T03:17:19.039Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: all necessary APIs are enabled
+[debug] [2018-05-29T03:17:19.041Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/one-time-password-21950  
+  
+ Mon May 28 2018 21:17:19 GMT-0600 (MDT)
+[debug] [2018-05-29T03:17:19.430Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-29T03:17:19.431Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/1046941039622:getServerAppConfig  
+  
+ Mon May 28 2018 21:17:19 GMT-0600 (MDT)
+[debug] [2018-05-29T03:17:19.945Z] <<< HTTP RESPONSE 200
+[info] i  functions: preparing functions directory for uploading...
+[info] i  functions: packaged functions (49.16 KB) for uploading
+[debug] [2018-05-29T03:17:20.488Z] >>> HTTP REQUEST POST https://cloudfunctions.googleapis.com/v1/projects/one-time-password-21950/locations/us-central1/functions:generateUploadUrl  
+  
+ Mon May 28 2018 21:17:20 GMT-0600 (MDT)
+[debug] [2018-05-29T03:17:50.935Z] <<< HTTP RESPONSE 503
+[debug] [2018-05-29T03:17:50.935Z] <<< HTTP RESPONSE BODY {
+  "error": {
+    "code": 503,
+    "message": "The service is currently unavailable.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+[debug] [2018-05-29T03:17:50.942Z] TypeError: Cannot create property 'error' on string '{
+  "error": {
+    "code": 503,
+    "message": "The service is currently unavailable.",
+    "status": "UNAVAILABLE"
+  }
+}
+'
+    at module.exports (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:11:16)
+    at Request._callback (/usr/local/lib/node_modules/firebase-tools/lib/api.js:47:25)
+    at Request.self.callback (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:185:22)
+    at Request.emit (events.js:182:13)
+    at Request.EventEmitter.emit (domain.js:442:20)
+    at Request.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1157:10)
+    at Request.emit (events.js:182:13)
+    at Request.EventEmitter.emit (domain.js:442:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1079:12)
+    at Object.onceWrapper (events.js:273:13)
+[error] 
+[error] Error: An unexpected error has occurred.
