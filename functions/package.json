@@ -2,7 +2,7 @@
   "name": "functions",
   "description": "Cloud Functions for Firebase",
   "scripts": {
-    "lint": "eslint .",
+    "lint": "eslint",
     "serve": "firebase serve --only functions",
     "shell": "firebase functions:shell",
     "start": "npm run shell",
@@ -12,7 +12,7 @@
   "dependencies": {
     "firebase-admin": "~5.12.1",
     "firebase-functions": "^1.0.3",
-    "twilio": "^3.0.0-rc.13"
+    "twilio": "^3.17.1"
   },
   "devDependencies": {
     "eslint": "^4.12.0",
